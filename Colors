@@ -4,3 +4,13 @@ Palheta de cores:
 .color3 { #e68a2e };
 .color4 { #c90a00 };
 .color5 { #452b34 };
+
+ou pode copiar isso no seu css:
+
+:root{
+    --color-cian:  #88d1ca;
+    --color-bege:  #ded6c9;
+    --color-orange:  #e68a2e;
+    --color-red:  #c90a00;
+    --color-grey:  #452b34;
+}
