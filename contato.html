@@ -5,12 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Combate à Dengue</title>
     
-    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="styles/contato.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!--link das imagens .svg-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--link das imagens .svg-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-    
-    </header>
+    <div class="header" id="header">
+        <!--função do botão ligada ao javascript para abrir e fechar o munu mobile-->
+        <button onclick="togglesidebar()" class="btn_menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+        <!--Header responsivo do site-->
+        <div class="logo">
+            <img src="./Imagens_Polaris/denguelogo.png" class="Logoimg" alt="Polaris Logo">
+        </div>
+        <div class="navbar" id="navbar">
+            <button onclick="togglesidebar()" class="btn_menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5" />
+                </svg>
+            </button>
+            <a href="/">Home</a></li>
+            <a href="/sobredengue.html">Dengue</a></li>
+            <a href="/sintomas.html">Sintomas</a></li>
+            <a href="/contato.html"  class="ativo">Contato</a></li>
+        </div>
+        <div class="Sign">
+            <a href="#" class="cadastro">Denuncia</a>
+        </div>
+    </div>
 
     <section class="contact-form">
         <h2>Entre em Contato Conosco</h2>
@@ -29,7 +62,108 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Combate à Dengue. Todos os direitos reservados.</p>
+        <div id="footer_contents">
+            <div id="footer_contacts">
+                <h1>Todos Contra a Dengue</h1>
+                <p>Denuncie irregularidades.</p>
+                <p>Onde precisar, Quando precisar</p>
+
+                        <div id="footer_social_media">
+                            <a href="#" class="footer_link" id="instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer_link" id="facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="footer_link" id="whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+
+                        </div>
+
+            </div>
+
+            <ul class="footer_list">
+                <li>
+                    <h3>Navegação</h3>
+                </li>
+                <li>
+                    <a href="/" class="footer_link">Home</a>
+                </li>
+                <li>
+                    <a href="/sobredengue.html" class="footer_link">Dengue</a>
+                </li>
+                <li>
+                    <a href="/sintomas.html" class="footer_link">Sintomas</a>
+                </li>
+                <li>
+                    <a href="/contato.html" class="footer_link">Contato</a>
+                </li>
+            </ul>
+
+            <ul class="footer_list">
+                <li>
+                    <h3>Ajuda</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Configurações</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Política de Privacidade</a>
+                </li>
+            </ul>
+            </div>
+
+        </div>
+        <div id="footer_copyright">
+            &#169
+            2023 Polaris Group, todos os direitos reservados
+        </div>
+
     </footer>
 </body>
+<script>
+    var header = document.getElementById('header');
+    var navbar = document.getElementById('navbar');
+    var content = document.getElementById('content');
+    var showSidebar = false;
+
+//função que configura o botão dizendo o que fazer se ela já estiver ativada ou se estiver desativada
+
+    function togglesidebar() {
+        showSidebar = !showSidebar;
+        if (showSidebar) {
+            navbar.style.marginLeft = '-7vw';
+            navbar.style.animationName = 'showSidebar'
+            content.style.filter = 'blur(2px)';
+        }
+        else {
+            navbar.style.marginLeft = '-100vw';
+            navbar.style.animation = '';
+            content.style.filter = '';
+        }
+
+    }
+
+    function closeSidebar() {
+        if (showSidebar) {
+            togglesidebar();
+        }
+    }
+
+    window.addEventListener('resize', function (event) {
+        if (window.innerWidth > 850 && showSidebar) {
+            togglesidebar();
+        }
+    })
+
+    document.getElementById('carouselExampleControls').querySelector('.carousel-control-prev').style.display = 'none';
+    document.getElementById('carouselExampleControls').querySelector('.carousel-control-next').style.display = 'none';
+</script>
 </html>

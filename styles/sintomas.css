@@ -1,63 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
     background-color: #ded6c9; /* Cor de fundo */
     color: #452b34; /* Cor do texto */
 }
-header, footer {
-    background-color: #88d1ca; /* Cor de fundo do cabeçalho e rodapé */
-    color: #fff; /* Cor do texto no cabeçalho e rodapé */
-    padding: 10px;
-    text-align: center;
-}
-h1 {
-    color: #e68a2e; /* Cor do título principal */
-}
-h2 {
-    color: #c90a00; /* Cor do subtítulo */
-}
-p {
-    margin-bottom: 15px;
-}
-
 img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 20px auto; /* Adiciona margem ao redor da imagem e a centraliza */
-}
-
-a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.ativo {
-    background-color: #e68a2e; /* Cor de destaque para o botão ativo */
-}
-
-/* Estilos específicos para cada botão */
-a[href="/"] {
-    background-color: #88d1ca;
-}
-
-a[href="/sobredengue"] {
-    background-color: #452b34;
-    color: #fff; /* Cor do texto ajustada para contraste */
-}
-
-a[href="/sintomas.html"] {
-    background-color: #e68a2e;
-}
-
-a[href="/Denúncia"] {
-    background-color: #c90a00;
-}
-
-a[href="/contato"] {
-    background-color: #452b34;
 }

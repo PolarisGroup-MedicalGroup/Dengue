@@ -141,6 +141,7 @@ footer{
 #footer_social_media{
     display: flex;
     gap: 2rem;
+    margin-right: 15em;
     margin-top: 1.5rem;
 }
 
